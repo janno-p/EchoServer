@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+  <soapenv:Header xmlns:xtee="http://x-tee.riik.ee/xsd/xtee.xsd">
+    <xtee:asutus />
+    <xtee:andmekogu>maakataster</xtee:andmekogu>
+    <xtee:isikukood />
+    <xtee:id>2DbhunQHupCL+lorMIJzy081ZmOoDzdiIEhYx4oaXvb/GyAydXVE19pD</xtee:id>
+    <xtee:nimi>maakataster.legacy1.v1</xtee:nimi>
+    <xtee:toimik />
+  </soapenv:Header>
+  <soapenv:Body>
+    <producer:legacyResponse xmlns:producer="http://producers.assert.xtee.riik.ee/producer/assert">
+      <paring xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <item>test</item>
+        <item>test</item>
+        <item>one</item>
+        <item>two</item>
+        <item>three</item>
+      </paring>
+      <keha>
+        <url>http://www.neti.ee/</url>
+      </keha>
+    </producer:legacyResponse>
+  </soapenv:Body>
+</soapenv:Envelope>

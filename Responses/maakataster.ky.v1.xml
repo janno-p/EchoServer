@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+  <soapenv:Header xmlns:xtee="http://x-tee.riik.ee/xsd/xtee.xsd">
+    <xtee:asutus />
+    <xtee:andmekogu>maakataster</xtee:andmekogu>
+    <xtee:isikukood />
+    <xtee:id>IFSnNzH3Yfchjwo7dQWajZTmh159xVddYwOmjMOl0K03Ptyge8aQqbz+</xtee:id>
+    <xtee:nimi>maakataster.ky.v1</xtee:nimi>
+    <xtee:toimik />
+    <xtee:autentija />
+  </soapenv:Header>
+  <soapenv:Body>
+    <producer:kyResponse xmlns:producer="http://producers.assert.xtee.riik.ee/producer/assert">
+      <paring xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <katastritunnus />
+        <ky_max></ky_max>
+      </paring>
+      <keha>
+        <item>
+          <katastritunnus>tunnus</katastritunnus>
+          <ky_ametlik_nimetus>ametlik nimetus</ky_ametlik_nimetus>
+          <registreeritud>2015-04-20T14:32:00</registreeritud>
+          <sihtotstarve1>001</sihtotstarve1>
+        </item>
+      </keha>
+    </producer:kyResponse>
+  </soapenv:Body>
+</soapenv:Envelope>
