@@ -20,14 +20,22 @@ let main argv =
         let request = context.Request
         let response = context.Response
 
-        let fileName = Path.GetTempPath() + Guid.NewGuid().ToString() + ".xml"
+        let fileName = Path.GetTempPath() + Guid.NewGuid().ToString() + ".txt"
 
         let getRequestMessage () =
-            use r = new StreamReader(request.InputStream)
-            let doc = XDocument.Load(r)
             use w = new StreamWriter(File.Create(fileName))
-            doc.Save(w)
-            doc
+            use r = new StreamReader(request.InputStream)
+            if request.ContentType.Contains("multipart") then
+                for _ in 1..6 do w.WriteLine(r.ReadLine()) |> ignore
+                let doc = XDocument.Parse(r.ReadLine())
+                doc.Save(w)
+                w.WriteLine()
+                w.WriteLine(r.ReadToEnd())
+                doc
+            else
+                let doc = XDocument.Load(r)
+                doc.Save(w)
+                doc
 
         let doc = getRequestMessage()
 
